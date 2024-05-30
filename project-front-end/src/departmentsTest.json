@@ -1,0 +1,26 @@
+[
+    {
+        "id": 2,
+        "name": "departmen 1",
+        "company": 1,
+        "manager": 2
+    },
+    {
+        "id": 3,
+        "name": "departmen 2",
+        "company": 1,
+        "manager": 2
+    },
+    {
+        "id": 4,
+        "name": "departmen 3",
+        "company": 1,
+        "manager": 2
+    },
+    {
+        "id": 5,
+        "name": "departmen 4",
+        "company": 1,
+        "manager": null
+    }
+]
