@@ -16,6 +16,7 @@ const EmployeeListingSingle = ({ employee }) => {
       progress: undefined,
     });
   };
+  
   return (
     <li key={employee.id} className="flex items-center justify-between p-4">
       <div>

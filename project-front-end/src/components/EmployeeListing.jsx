@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
 import EmployeeListingSingle from './EmployeeListingSingle';
-import employeesData from '../employeesTest.json'; 
+// import employeesData from '../employeesTest.json'; 
 import { Link } from 'react-router-dom';
 
 const EmployeeListing = () => {
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-
-    setEmployees(employeesData);
-
+    // Fetch data from Django API
+    fetch('http://127.0.0.1:9000/emp/')
+      .then(response => response.json())
+      .then(data => setEmployees(data.Employees))
+      .catch(error => console.error('Error fetching employees:', error));
   }, []);
 
   return (

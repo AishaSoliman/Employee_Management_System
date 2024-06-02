@@ -1,14 +1,43 @@
 // import React from 'react';
 import { useParams } from 'react-router-dom';
-
-import Company from '../companyTest.json'
+import { useEffect, useState } from "react";
+// import Company from '../companyTest.json'
 
 const CompanyPage = () => {
   const { id } = useParams();
-  const company = Company.find(company => company.id === parseInt(id));
+  const [company, setCompany] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch(`http://127.0.0.1:9000/company/${id}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setCompany(data.message);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching departments:", error);
+        setError(error);
+        setLoading(false);
+      });
+  }, [id]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   if (!company) {
-    return <div className="text-center text-red-500">Employee not found</div>;
+    return <div className="text-center text-red-500">Department not found</div>;
   }
 
   return (
