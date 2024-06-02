@@ -9,6 +9,12 @@ import DepartmentsPage from './pages/DepartmentsPage';
 import CompaniesPage from './pages/CompaniesPage';
 import NotFoundPage from './pages/NotFoundPage';
 import EmployeeProfile from './pages/EmployeeProfile';
+import LoginPage from './pages/LoginPage';
+import CompanyPage from './pages/CompanyPage';
+import DepartmentPage from './pages/DepartmentPage';
+import EmployeeEditPage from './pages/EmployeeEditPage';
+import EmployeeCreatePage from './pages/EmployeeCreatePage';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   const router = createBrowserRouter(
@@ -17,8 +23,13 @@ const App = () => {
         <Route path='/' element={<HomePage />}/>
         <Route path='/employees' element={<EmployeesPage />}/>
         <Route path="/employees/view/:id" element={<EmployeeProfile/>} />
+        <Route path='/employees/edit/:id' element={<EmployeeEditPage />} />
+        <Route path='/employees/create' element={<EmployeeCreatePage />} />
         <Route path='/companies' element={<CompaniesPage />}/>
+        <Route path='/companies/view/:id' element={<CompanyPage />}/>
         <Route path='/departments' element={<DepartmentsPage />}/>
+        <Route path='/departments/view/:id' element={<DepartmentPage />}/>
+        <Route path="/login" element={<LoginPage />} /> {/* Add the LoginPage route */}
         <Route path='*' element={<NotFoundPage/>}/>
       </Route>
       
@@ -43,8 +54,8 @@ const App = () => {
     // <Footer/>
     // </>
     <>
-    <RouterProvider router={router} />
-
+      <RouterProvider router={router} />
+      <ToastContainer />
     </>
   )
   

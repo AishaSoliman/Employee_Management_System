@@ -1,13 +1,28 @@
 // import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const EmployeeListingSingle = ({ employee }) => {
+  const handleClick = (event) => {
+    event.preventDefault();
+    toast.info('Good Click!', {
+      position: "top-right",
+      autoClose: 3000, 
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
   return (
     <li key={employee.id} className="flex items-center justify-between p-4">
       <div>
         <h3 className="text-lg font-medium">{employee.name}</h3>
         <p className="text-sm text-gray-500">Employee ID: {employee.id}</p>
+        <p className="text-sm text-gray-500">Mobile: {employee.mobile_number}</p>
+        <p className="text-sm text-gray-500">Address: {employee.address}</p>
       </div>
       <div className="flex items-center space-x-4">
         <span
@@ -25,13 +40,14 @@ const EmployeeListingSingle = ({ employee }) => {
         </Link>
         <Link
           to={`/employees/edit/${employee.id}`}
-          className="px-4 py-2 bg-gray-200 text-gray-700 text-sm font-medium rounded hover:bg-gray-300"
+          className="px-4 py-2 bg-gray-200 text-gray-700 text-sm font-medium rounded hover:bg-blue-300"
         >
           Edit
         </Link>
         <Link
           to=""
-          className="px-4 py-2 bg-gray-200 text-gray-700 text-sm font-medium rounded hover:bg-gray-300 ml-3"
+          onClick={handleClick}
+          className="px-4 py-2 bg-gray-200 text-gray-700 text-sm font-medium rounded hover:bg-red-300 ml-3"
         >
           Delete
         </Link>

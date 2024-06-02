@@ -41,6 +41,10 @@ const NavBar = () => {
                   to="/employees"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                   >Employee</Link>
+                  <Link
+                  to="/login"
+                  className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+                  >Log in</Link>
               </div>
             </div>
           </div>

@@ -1,25 +1,25 @@
 [
     {
+        "id": 1,
+        "name": "Departmen 1",
+        "company": 1,
+        "manager": 2
+    },
+    {
         "id": 2,
-        "name": "departmen 1",
+        "name": "Departmen 2",
         "company": 1,
         "manager": 2
     },
     {
         "id": 3,
-        "name": "departmen 2",
+        "name": "Departmen 3",
         "company": 1,
         "manager": 2
     },
     {
         "id": 4,
-        "name": "departmen 3",
-        "company": 1,
-        "manager": 2
-    },
-    {
-        "id": 5,
-        "name": "departmen 4",
+        "name": "Departmen 4",
         "company": 1,
         "manager": null
     }

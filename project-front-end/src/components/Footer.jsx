@@ -1,8 +1,8 @@
-// import React from 'react'
+// import React from 'react';
 
 const Footer = () => {
-    return (
-        <footer className="bg-gray-800 text-white py-6">
+  return (
+    <footer className="bg-gray-800 text-white py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
@@ -37,14 +37,11 @@ const Footer = () => {
                 <path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18.6c-4.74 0-8.6-3.86-8.6-8.6s3.86-8.6 8.6-8.6 8.6 3.86 8.6 8.6-3.86 8.6-8.6 8.6z" />
               </svg>
             </a>
-            
           </div>
         </div>
-       
       </div>
     </footer>
-      )
-    
-}
+  );
+};
 
-export default Footer
+export default Footer;
