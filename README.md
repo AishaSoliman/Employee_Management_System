@@ -1,6 +1,7 @@
 Employee Management System: 
 
 Table of Contents:
+    - Updates
     - Features
     - Technologies Used
     - Installation and Setup
@@ -9,6 +10,8 @@ Table of Contents:
     - Checklist & Considerations
     - Additional Considerations and Implementations
 
+Updates:
+    - implement integration for departments, company, employees listing and profile
 
 Features:
     - View, create, edit, and delete employees
